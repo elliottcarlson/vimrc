@@ -59,9 +59,18 @@ set textwidth=80
 autocmd BufNewFile,BufRead *.md setlocal ft=markdown
 autocmd BufNewFile,BufRead *.es6 setlocal ft=javascript
 
-" Save with ctrl-s
-" nmap <c-s> :w<CR>
-" imap <c-s> <Esc>:w<CR>a
+" Editorconfig and fugutive compativility config
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+" Syntastic config
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Color settings
 colorscheme desert
