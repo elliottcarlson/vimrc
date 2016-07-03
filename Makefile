@@ -15,14 +15,14 @@ all: install_pathogen $(BUNDLES) post_install
 #----------------------------------------------------
 install_pathogen:
 	mkdir -p autoload bundle && \
-  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+	curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 #----------------------------------------------------
 # Generic installer for pathogen modules
 #----------------------------------------------------
 $(BUNDLES):
 	cd bundle && echo $@ | cut -f2 -d/ | xargs \
-  test -d || git clone git://github.com/$@.git
+	test -d || git clone git://github.com/$@.git
 
 #----------------------------------------------------
 # Add post-install instructions here
@@ -31,4 +31,6 @@ post_install:
 	## vim-fugitive post install setup
 	cd bundle && vim -u NONE -c "helptags vim-fugitive/doc" -c q
 
-
+	echo "" >> ~/.vimrc
+	echo "\" Include ~/.vim/defaults.vim" >> ~/.vimrc
+	echo "source ~/.vim/defaults.vim" >> ~/.vimrc

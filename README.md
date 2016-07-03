@@ -9,8 +9,6 @@ cd ~/.vim
 make
 ```
 
-Then add `source ~/.vim/default.vim` to your `~/.vimrc` file. 
-
 ## What gets installed?
 
 * [vim-pathogen](https://github.com/tpope/vim-pathogen)
@@ -22,6 +20,10 @@ Then add `source ~/.vim/default.vim` to your `~/.vimrc` file.
 * [vim-airline](https://github.com/bling/vim-airline)
 * [syntastic](https://github.com/scooloose/syntastic)
 
-## Adding pathogen bundles
+## Customization
+
+The Makefile does not overwrite your .vimrc file; it will append two lines to
+an existing .vimrc file.
+
 The bundles.txt file contains the github user and repo names, one per line.
 Add new bundles to the bundles.txt file and run make again.
