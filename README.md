@@ -18,7 +18,7 @@ make
 * [editorconfig](https://github.com/editorconfig/editorconfig-vim)
 * [vim-es6](https://github.com/isRuslan/vim-es6)
 * [vim-airline](https://github.com/bling/vim-airline)
-* [syntastic](https://github.com/scooloose/syntastic)
+* [syntastic](https://github.com/scrooloose/syntastic)
 
 ## Customization
 

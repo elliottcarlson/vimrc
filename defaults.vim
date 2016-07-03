@@ -72,6 +72,9 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" Syntastic and airline compatibility
+let g:airline#extensions#syntastic#enabled = 1
+
 " Color settings
 colorscheme desert
 set background=dark
