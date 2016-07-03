@@ -1,6 +1,7 @@
 HOME_DIR := ~
 VIM_DIR := $(HOME_DIR)/.vim
 BUNDLE_DIR := $(VIM_DIR)/bundle
+INCLUDE := "source ~/.vim/defaults.vim"
 
 #----------------------------------------------------
 # Reads the github repos for the pathogen bundles to
@@ -31,6 +32,6 @@ post_install:
 	## vim-fugitive post install setup
 	cd bundle && vim -u NONE -c "helptags vim-fugitive/doc" -c q
 
-	echo "" >> ~/.vimrc
-	echo "\" Include ~/.vim/defaults.vim" >> ~/.vimrc
-	echo "source ~/.vim/defaults.vim" >> ~/.vimrc
+	## add include statement to regular .vimrc file
+	grep -Fxq $(INCLUDE) ~/.vimrc || echo "">> ~/.vimrc
+	grep -Fxq $(INCLUDE) ~/.vimrc || echo $(INCLUDE) >> ~/.vimrc
