@@ -1,0 +1,7 @@
+tpope/vim-sensible
+tpope/vim-fugitive
+tpope/vim-sleuth
+editorconfig/editorconfig-vim
+isRuslan/vim-es6
+bling/vim-airline
+scrooloose/syntastic
