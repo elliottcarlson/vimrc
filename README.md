@@ -4,10 +4,12 @@
 ## Installation
 
 ```shell
-git clone git://github.com/elliottcarlson/vimrc.git
-cd vimrc
+git clone git://github.com/elliottcarlson/vimrc.git ~/.vim
+cd ~/.vim
 make
 ```
+
+Then add `source ~/.vim/default.vim` to your `~/.vimrc` file. 
 
 ## What gets installed?
 
