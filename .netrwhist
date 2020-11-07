@@ -1,3 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/z/dev/new/website/websrc/src/constants'
+let g:netrw_dirhist_2='/z/dev/react-workflow'
+let g:netrw_dirhist_3='/z/dev/BACTrack/playground/src/store/BACTrack/reducer'
+let g:netrw_dirhist_4='/v/Incident Commander/config'

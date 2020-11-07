@@ -5,3 +5,7 @@ editorconfig/editorconfig-vim
 isRuslan/vim-es6
 bling/vim-airline
 scrooloose/syntastic
+leafgarland/typescript-vim
+peitalin/vim-jsx-typescript
+dense-analysis/ale
+ianks/vim-tsx

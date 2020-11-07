@@ -52,8 +52,19 @@ set smartindent
 set shiftwidth=4
 set softtabstop=4
 
-" 80 column text width
-set textwidth=80
+" 120 column text width
+set textwidth=120
+
+" Set a different backup copy directory
+set backupdir=~/.vim_backupcopy
+set backupcopy=yes
+
+" Configure ale linters
+let g:ale_linters = {
+\ 'typescript': ['tsserver']
+\}
+let g:ale_linter_aliases = {'typescriptreact': 'typescript'}
+
 
 " Some file type declarations
 autocmd BufNewFile,BufRead *.md setlocal ft=markdown
@@ -80,7 +91,9 @@ let g:airline#extensions#syntastic#enabled = 1
 " Color settings
 colorscheme desert
 set background=dark
-let &colorcolumn=join(range(81,999),",")
+
+let &colorcolumn="80,".join(range(120,999),",")
+" let &colorcolumn=join(range(121,999),",")
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
 
 " Highlight extra spaces in red
